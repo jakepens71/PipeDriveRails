@@ -1,7 +1,7 @@
 <h1>Hello</h1>
 
-ID: <%= Report.length['id'] %>
-Name: <%= Report.length['name'] %>
+ID: <%= Report.length %>
+Name: <%= Report.length %>
 <br/>
 
 <table>
@@ -9,6 +9,10 @@ Name: <%= Report.length['name'] %>
    <tr>
     <th>Deal ID</th>
     <th>User Name</th>
+    <th>User Id</th>
+    <th>Organization Name</th>
+    <th>Deal Title</th>
+    <th>Deal Value</th>
    </tr>
   </thead>
   <tbody>
@@ -17,6 +21,10 @@ Name: <%= Report.length['name'] %>
 	 <% while i < Report.findAll.length %>
 	<td><%= Report.findAll[i]['id'] %></td>
 	<td><%= Report.findAll[i]['user_id']['name'] %></td>	
+	<td><%= Report.findAll[i]['user_id']['id'] %></td>
+	<td><%= Report.findAll[i]['org_id']['name'] %></td>
+	<td><%= Report.findAll[i]['title'] %></td>
+	<td><%= Report.findAll[i]['value'] %></td>
 	 <% i +=1 %>
    </tr>
    <% end %>
